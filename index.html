@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Ti V ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+body{
+    margin:0;
+    font-family:'Georgia', serif;
+    background:
+        radial-gradient(circle at center, #ff1744, #880e4f);
+    min-height:100vh;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* FONDO BRILLO */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.15), transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(255,255,255,.1), transparent 45%);
+    pointer-events:none;
+}
+
+/* CABECERA */
+header{
+    text-align:center;
+    padding:50px 20px;
+}
+header h1{
+    font-size:3em;
+    letter-spacing:3px;
+    animation: latido 2s infinite;
+    text-shadow:0 0 25px rgba(255,255,255,.6);
+}
+header p{
+    font-size:1.3em;
+    opacity:.95;
+}
+
+/* ALBUM */
+.album{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:45px;
+    padding:40px;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* FOTO */
+.foto{
+    background:linear-gradient(180deg,#fff,#ffe6f0);
+    padding:15px 15px 55px;
+    border-radius:10px;
+    position:relative;
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.6),
+        inset 0 0 0 4px #ff80ab;
+    transition:.5s;
+}
+
+/* ROTACIONES */
+.foto:nth-child(odd){ transform:rotate(-4deg); }
+.foto:nth-child(even){ transform:rotate(3deg); }
+.foto:nth-child(3n){ transform:rotate(-2deg); }
+
+/* HOVER */
+.foto:hover{
+    transform:scale(1.15) rotate(0deg);
+    z-index:20;
+    box-shadow:0 40px 80px rgba(0,0,0,.8);
+}
+
+/* IMAGEN */
+.foto img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:8px;
+    border:5px solid #ffd1e8;
+}
+
+/* FRASE MANUSCRITA */
+.foto::after{
+
+    content:"Para siempre contigo  ❤️";
+    position:absolute;
+    bottom:15px;
+    left:0;
+    right:0;
+    text-align:center;
+    font-size:1.05em;
+    color:#c2185b;
+    font-style:italic;
+}
+
+/* STICKER */
+.foto::before{
+    content:"💘";
+    position:absolute;
+    top:-20px;
+    left:-20px;
+    font-size:40px;
+    transform:rotate(-15deg);
+}
+
+/* PIE */
+footer{
+    text-align:center;
+    padding:40px 20px;
+    font-size:1.2em;
+    background:rgba(255,20,70,.4);
+    box-shadow:0 -10px 40px rgba(0,0,0,.6);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>❤️ Solo Tú ❤️</h1>
+	<h4>by Valezka And Mateo<h4>
+    <p>Mi lugar favorito siempre será donde estés tú</p>
+</header>
+
+<section class="album">
+    <div class="foto"><img src="img1.jpg"></div>
+    <div class="foto"><img src="img2.jpg"></div>
+    <div class="foto"><img src="img3.jpg"></div>
+    <div class="foto"><img src="img4.jpg"></div>
+    <div class="foto"><img src="img5.jpg"></div>
+    <div class="foto"><img src="img6.jpg"></div>
+    <div class="foto"><img src="img7.jpg"></div>
+    <div class="foto"><img src="img8.jpg"></div>
+    <div class="foto"><img src="img9.jpg"></div>
+    <div class="foto"><img src="img10.jpg"></div>
+    <div class="foto"><img src="img11.jpg"></div>
+    <div class="foto"><img src="img12.jpg"></div>
+    <div class="foto"><img src="img13.jpg"></div>
+    <div class="foto"><img src="img14.jpg"></div>
+    <div class="foto"><img src="img15.jpg"></div>
+</section>
+
+<footer>
+    Te elegiría una y mil veces ❤️
+</footer>
+
+</body>
+</html>
